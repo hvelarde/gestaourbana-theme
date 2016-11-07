@@ -1,2 +1,2 @@
-# gestao_theme_plone
-Projeto de tema Gestão Urbana para Plone CMS
+# observa_plone_theme
+Tema plone Observa Sampa

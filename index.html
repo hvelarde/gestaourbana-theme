@@ -4,13 +4,16 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Beyondskins</title>
+    <title>Observatório Sampa | Observa Sampa | Prefeitura de São Paulo</title>
 
     <!--[if IE]>
         <script src="http://htmlshiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link type="text/css" rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="behavior.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/plone_components_style.css" />
+    <script type="text/javascript" src="js/behavior.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/contraste.js"></script>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="img/touch_icon.png">
@@ -43,26 +46,38 @@
     <!-- Header -->
         <header id="main-header" role="banner">
             <div>
-                <div class="primary-header">header primário</div>
-                <div id="logo">
-                    <a href="#" title="#">
-                        <img alt="Logo"  accesskey="1" src="img/logo.png" />
-                    </a>
+                <div class="primary-header">
+                  <select style="float: left;" name="cmb_secretarias" id="cmb_secretarias" class="selectGrey">
+                        <option>Prefeitura de São Paulo</option>
+                    </select>
+                  <a style="float: right;" href="#">Acesso a Informação</a>
                 </div>
-
-                <!-- Search -->
-                <div id="search" role="search">
-                    <form>
-                        <div class="LSBox">
-                        <label class="hiddenStructure" for="searchGadget">Busca</label>
-
-                        <input name="SearchableText" type="text" size="18" title="Buscar no Site" placeholder="Buscar no Site" accesskey="4" class="searchField" id="searchGadget" autocomplete="off"><input class="searchButton" type="submit" value="Buscar">
-
-                        <div class="LSResult" id="LSResult" style="display: none;"><div class="LSShadow" id="LSShadow"></div></div>
+                <div class="row" id="second-header">
+                        <div id="logo" class="col-md-4">
+                            <a href="#" title="#">
+                                <img alt="Logo"  accesskey="1" src="img/logo.png" />
+                            </a>
                         </div>
-                    </form>
-                </div>
-               <div id="acessibilidade">acessibilidade</div>
+
+                        <!-- Search -->
+                        <div class="col-md-4">
+                            <div id="search" role="search">
+                                <form>
+                                    <div class="LSBox">
+                                    <label class="hiddenStructure" for="searchGadget">Busca</label>
+
+                                    <input name="SearchableText" type="text" size="18" title="Buscar no Site" placeholder="Buscar no Site" accesskey="4" class="s archField" id="searchGadget" autocomplete="off"><input class="searchButton" type="submit" value="Buscar">
+
+                                    <div class="LSResult" id="LSResult" style="display: none;"><div class="LSShadow" id="LSShadow"></div></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                       <div id="acessibilidade" class="col-md-4">
+                           <a id="linkAcessibilidade">Acessibilidade</a>
+                           <a id="linkAltoContraste">Alto Contraste</a>
+                       </div>
+               </div>
         <!-- Main Menu -->
 
                 <nav id="main-navigation" role="navigation">
@@ -223,24 +238,87 @@
 
     <!-- Footer --> 
         <footer role="contentinfo">
-            <div class="row">
-        <div class="col-md-3"><img style="top: 70%" src="http://gestaourbana.prefeitura.sp.gov.br/wp-content/themes/gestaourbana-1.2/images/logo_prefeitura_sem_smdu_footer.jpg"></div>
-        <div class="col-md-3"><h4>CONTATO</h4>
-        Secretaria Municipal de Desenvolvimento Urbano (SMDU)
-                Prefeitura de São Paulo
-                Rua São Bento, 405, Centro - 17º e 18º andar
-                CEP 01011-100 - São Paulo - SP
-                Telefone: (11) 3113 7500
-        </div>
-        <div class="col-md-3">Todo o conteúdo do site está disponível sob licença Creative Commons. Acesse a página Desenvolvimento e saiba mais.</div>
-        <div class="col-md-3">
-            <a href="https://www.facebook.com/pmsp.smdu" target="_blank"><img src="http://gestaourbana.prefeitura.sp.gov.br/wp-content/themes/gestaourbana-1.2/images/btn-facebook-27x27.png"></a>
-            <a href="https://twitter.com/pmsp_smdu" target="_blank"><img src="http://gestaourbana.prefeitura.sp.gov.br/wp-content/themes/gestaourbana-1.2/images/btn-twitter-27x27.png"></a>
-            <a href="http://www.youtube.com/user/pmspsmdu" target="_blank"><img src="http://gestaourbana.prefeitura.sp.gov.br/wp-content/themes/gestaourbana-1.2/images/icon-youtube.png"></a>
-        </div>
-        
-    </div>
-          
+        <div class="footerContainer">
+            <div class="row" id="footerFirstRow">
+                <div class="col-md-3">
+                    <span class="footerTitleItem">PREFEITURA DE SÃO PAULO</span><br><br>
+                    <select name="cmb_secretarias" id="cmb_secretarias" class="selectGrey">
+                        <option>Secretarias</option>
+                    </select><br><br>
+                    <select name="cmb_subprefeituras" id="cmb_subprefeituras" class="selectGrey">
+                        <option>Subprefeituras</option>
+                    </select><br><br>
+                    <select name="cmb_outros_orgaos" id="cmb_outros_orgaos" class="selectGrey">
+                        <option>Outros Órgãos</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <span class="footerTitleItem">PLATAFORMAS DE PARTICIPAÇÃO E TRANSPARÊNCIA</span><br><br>
+                    <a href="">Busca Saúde</a><br>
+                    <a href="">Combate Assédio Sexual</a><br>
+                    <a href="">GeoSampa</a><br>
+                    <a href="">Gestão Urbana</a><br>
+                    <a href="">Infocidade</a><br>
+                    <a href="">Mapas e Serviços</a><br>
+                    <a href="">Mobilidade Segura</a><br>
+                    <a href="">Observa Sampa</a><br>
+                    <a href="">Planeja Sampa</a><br>
+                    <a href="">São Paulo Aberta</a><br>
+                    <a href="">SPCultura</a>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <span class="footerTitleItem">CONSULTAS</span> <br><br>   
+                        <a href="">Leis Municipais</a><br>
+                        <a href="">Pesquisas de Processos</a><br>
+                        <a href="">Licitações</a><br>
+                        <a href="">Ata de Registros de Preços</a><br>
+                        <a href="">Diário Oficial</a>
+                    </div><br><br>
+                    <div class="row" style="padding-top: 10px;">
+                        <span class="footerTitleItem">SÃO PAULO PARA</span> <br><br>
+                        <a href="">Cidadão</a><br>
+                        <a href="">Empresa</a><br>
+                        <a href="">Turista</a><br>
+                        <a href="">Servidor</a><br>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <span class="footerTitleItem">TRANSPARÊNCIA</span> <br><br>   
+                        <a href="">Portal da Transparência</a><br>
+                        <a href="">Dados Abertos</a><br>
+                    </div><br><br>
+                    <div class="row" style="padding-top: 10px;">
+                        <span class="footerTitleItem">SERVIÇOS AOS CIDADÃOS</span> <br><br>
+                        <a href="">Guia de Serviços</a><br>
+                        <a href="">Aplicativos</a><br>
+                        <a href="">Procon Paulistano</a><br>
+                        <a href="">Pedido de Informação</a><br>
+                        <a href="">Central 156</a><br>
+                        <a href="">Praças de atendimento das Subprefeituras</a><br>
+                        <a href="">Ouvidoria Geral do Município: 0800 175717</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row" id="footerSecondRow">
+                <div class="col-md-3"><img style="top: 70%; width:200px;" src="http://comunicacao.smdu.pmsp:8081/Plone/gestaourbana/logo_prefeitura_sem_fundo.png"></div>
+                <div class="col-md-3"><h4>CONTATO</h4><br>
+                        <p>Secretaria Municipal de Desenvolvimento Urbano (SMDU)<br>
+                        Prefeitura de São Paulo<br>
+                        Rua São Bento, 405, Centro - 17º e 18º andar<br>
+                        CEP 01011-100 - São Paulo - SP<br>
+                        Telefone: (11) 3113 7500</p>
+                </div>
+                <div class="col-md-3"><p>Todo o conteúdo do site está <br>disponível sob licença Creative Commons.<br> Acesse a página Desenvolvimento e saiba mais.</p></div>
+                <div class="col-md-3">
+                    <a href="https://www.facebook.com/PrefSP" target="_blank"><img src="http://comunicacao.smdu.pmsp:8081/Plone/gestaourbana/icone-face.png"></a>
+                    <a href="https://twitter.com/PrefSP" target="_blank"><img src="http://comunicacao.smdu.pmsp:8081/Plone/gestaourbana/icone-twitter.png"></a>
+                    <a href="https://www.youtube.com/user/prefeiturasaopaulo" target="_blank"><img src="http://comunicacao.smdu.pmsp:8081/Plone/gestaourbana/icone-youtube.png"></a>
+                </div>
+            </div>
+        </div>  
         </footer>
 
     </div>
