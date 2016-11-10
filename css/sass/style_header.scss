@@ -77,6 +77,7 @@ header {
 } 
 
 /* Navigation */
+$colorsNav:  #C81400, #ea5600, #c14292,#ffcc01,#00aeeb,#34bb51;
 nav {
     clear: both;
     font-size: 0.9em;
@@ -85,25 +86,20 @@ nav {
       background: #ffffff;
       background: transparent;
       color: #666666;
-        li:nth-child(1) a::before {background: #C81400;}
-        li:nth-child(2) a::before {background: #ea5600;}
-        li:nth-child(3) a::before {background: #c14292;}
-        li:nth-child(4) a::before {background: #ffcc01;}
-        li:nth-child(5) a::before {background: #00aeeb;}
-        li:nth-child(6) a::before {background: #34bb51;}
         /*submenus cor*/
-        li:nth-child(1) .submenu li a::before {background: #C81400;}
-        li:nth-child(1) .submenu li a{color: #000;}
-        li:nth-child(2) .submenu li a::before {background: #ea5600;}
-        li:nth-child(2) .submenu li a{color: #000;}
-        li:nth-child(3) .submenu li a::before {background: #c14292;}
-        li:nth-child(3) .submenu li a{color: #000;}
-        li:nth-child(4) .submenu li a::before {background: #ffcc01;}
-        li:nth-child(4) .submenu li a{color: #000;}
-        li:nth-child(5) .submenu li a::before {background: #00aeeb;}
-        li:nth-child(5) .submenu li a{color: #000;}
-        li:nth-child(6) .submenu li a::before {background: #34bb51;}
-        li:nth-child(6) .submenu li a{color: #000;}
+        @for $i from 1 through 6 {
+              //Cores NAV Principal
+              li:nth-child(#{$i}) a::before {background: nth($colorsNav, $i)}
+              /*submenus cor*/
+              li:nth-child(#{$i}) .submenu li{
+                  a::before,.navTreeLevel1 a::before{
+                      background: nth($colorsNav, $i)
+                  }
+                  a{
+                      color: #000;
+                  }
+              }
+        }
     }
     a {
       padding: 1em;

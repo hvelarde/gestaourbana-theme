@@ -73,40 +73,46 @@ nav {
     background: #ffffff;
     background: transparent;
     color: #666666;
+    /*submenus cor*/
+    /*submenus cor*/
+    /*submenus cor*/
+    /*submenus cor*/
+    /*submenus cor*/
+    /*submenus cor*/
     /*submenus cor*/ }
     nav ul li:nth-child(1) a::before {
       background: #C81400; }
-    nav ul li:nth-child(2) a::before {
-      background: #ea5600; }
-    nav ul li:nth-child(3) a::before {
-      background: #c14292; }
-    nav ul li:nth-child(4) a::before {
-      background: #ffcc01; }
-    nav ul li:nth-child(5) a::before {
-      background: #00aeeb; }
-    nav ul li:nth-child(6) a::before {
-      background: #34bb51; }
-    nav ul li:nth-child(1) .submenu li a::before {
+    nav ul li:nth-child(1) .submenu li a::before, nav ul li:nth-child(1) .submenu li .navTreeLevel1 a::before {
       background: #C81400; }
     nav ul li:nth-child(1) .submenu li a {
       color: #000; }
-    nav ul li:nth-child(2) .submenu li a::before {
+    nav ul li:nth-child(2) a::before {
+      background: #ea5600; }
+    nav ul li:nth-child(2) .submenu li a::before, nav ul li:nth-child(2) .submenu li .navTreeLevel1 a::before {
       background: #ea5600; }
     nav ul li:nth-child(2) .submenu li a {
       color: #000; }
-    nav ul li:nth-child(3) .submenu li a::before {
+    nav ul li:nth-child(3) a::before {
+      background: #c14292; }
+    nav ul li:nth-child(3) .submenu li a::before, nav ul li:nth-child(3) .submenu li .navTreeLevel1 a::before {
       background: #c14292; }
     nav ul li:nth-child(3) .submenu li a {
       color: #000; }
-    nav ul li:nth-child(4) .submenu li a::before {
+    nav ul li:nth-child(4) a::before {
+      background: #ffcc01; }
+    nav ul li:nth-child(4) .submenu li a::before, nav ul li:nth-child(4) .submenu li .navTreeLevel1 a::before {
       background: #ffcc01; }
     nav ul li:nth-child(4) .submenu li a {
       color: #000; }
-    nav ul li:nth-child(5) .submenu li a::before {
+    nav ul li:nth-child(5) a::before {
+      background: #00aeeb; }
+    nav ul li:nth-child(5) .submenu li a::before, nav ul li:nth-child(5) .submenu li .navTreeLevel1 a::before {
       background: #00aeeb; }
     nav ul li:nth-child(5) .submenu li a {
       color: #000; }
-    nav ul li:nth-child(6) .submenu li a::before {
+    nav ul li:nth-child(6) a::before {
+      background: #34bb51; }
+    nav ul li:nth-child(6) .submenu li a::before, nav ul li:nth-child(6) .submenu li .navTreeLevel1 a::before {
       background: #34bb51; }
     nav ul li:nth-child(6) .submenu li a {
       color: #000; }
