@@ -77,7 +77,8 @@ header {
 } 
 
 /* Navigation */
-$colorsNav:  #C81400, #ea5600, #c14292,#ffcc01,#00aeeb,#34bb51;
+$opac: 1;
+$colorsNav:  rgba(200, 20, 0, $opac), rgba(234, 86, 0, $opac), rgba(193, 66, 146, $opac),rgba(255, 204, 1, $opac),rgba(0, 174, 235, $opac),rgba(52, 187, 81, $opac);
 nav {
     clear: both;
     font-size: 0.9em;
@@ -86,14 +87,20 @@ nav {
       background: #ffffff;
       background: transparent;
       color: #666666;
-        /*submenus cor*/
         @for $i from 1 through 6 {
               //Cores NAV Principal
               li:nth-child(#{$i}) a::before {background: nth($colorsNav, $i)}
               /*submenus cor*/
               li:nth-child(#{$i}) .submenu li{
                   a::before,.navTreeLevel1 a::before{
-                      background: nth($colorsNav, $i)
+                      background: nth($colorsNav, $i);
+                          border: white;
+                          border-width: 1px;
+                          border-style: inset;
+                          border-radius: 3px;
+                  }
+                  .navTreeLevel1{
+                        width: 150%;
                   }
                   a{
                       color: #000;
@@ -127,37 +134,43 @@ nav {
         &:hover > ul.submenu {
           display: block;
           position: absolute;
-          z-index: 99999;
-          background: #ffffff;
-          background: #F5F5F5;
+          z-index: 999;
           text-align: left;
-          width: 200px;
-          -moz-box-shadow: 0 5px 10px #d6d6d6;
-          -webkit-box-shadow: 0 5px 10px #d6d6d6;
-          box-shadow: 0 5px 10px #d6d6d6;
+          -moz-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+          -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+          border-radius: 3px;
+          background: rgba(217,0,19,0.8);
+          width: 450%;
+          margin-top: 10px;
+          top: 20px;
+          left: 0px;
         }
         &:first-child a {
             border-left: 0;
         }
     }
-    ul.submenu a.state-published:hover,
+   /* ul.submenu a.state-published:hover,
     .selected ul.submenu .state-published {
       color: #666666;
-    }
+    }*/
     /* dropdown compatibility */
-    .submenu li a {
+   /* .submenu li a {
       width: 160px;
-    }
+    }*/
 
     
 }
 
 
 .selected ul.submenu .state-published {
-  color: #008044 !important;
+  color: #fff !important;
 }
-ul.submenu a.state-published:hover {
-  color: #001a0e !important;
+ul.submenu a.state-published {
+  color: #fff !important;
+  &:hover{
+    font-weight: bold;
+  }
 }
 
 nav ul li a.plain{

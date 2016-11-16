@@ -68,7 +68,14 @@ nav {
   clear: both;
   font-size: 0.9em;
   background: transparent;
-  /* dropdown compatibility */ }
+  /* ul.submenu a.state-published:hover,
+   .selected ul.submenu .state-published {
+     color: #666666;
+   }*/
+  /* dropdown compatibility */
+  /* .submenu li a {
+     width: 160px;
+   }*/ }
   nav ul {
     background: #ffffff;
     background: transparent;
@@ -78,42 +85,77 @@ nav {
     /*submenus cor*/
     /*submenus cor*/
     /*submenus cor*/
-    /*submenus cor*/
     /*submenus cor*/ }
     nav ul li:nth-child(1) a::before {
-      background: #C81400; }
+      background: #c81400; }
     nav ul li:nth-child(1) .submenu li a::before, nav ul li:nth-child(1) .submenu li .navTreeLevel1 a::before {
-      background: #C81400; }
+      background: #c81400;
+      border: white;
+      border-width: 1px;
+      border-style: inset;
+      border-radius: 3px; }
+    nav ul li:nth-child(1) .submenu li .navTreeLevel1 {
+      width: 150%; }
     nav ul li:nth-child(1) .submenu li a {
       color: #000; }
     nav ul li:nth-child(2) a::before {
       background: #ea5600; }
     nav ul li:nth-child(2) .submenu li a::before, nav ul li:nth-child(2) .submenu li .navTreeLevel1 a::before {
-      background: #ea5600; }
+      background: #ea5600;
+      border: white;
+      border-width: 1px;
+      border-style: inset;
+      border-radius: 3px; }
+    nav ul li:nth-child(2) .submenu li .navTreeLevel1 {
+      width: 150%; }
     nav ul li:nth-child(2) .submenu li a {
       color: #000; }
     nav ul li:nth-child(3) a::before {
       background: #c14292; }
     nav ul li:nth-child(3) .submenu li a::before, nav ul li:nth-child(3) .submenu li .navTreeLevel1 a::before {
-      background: #c14292; }
+      background: #c14292;
+      border: white;
+      border-width: 1px;
+      border-style: inset;
+      border-radius: 3px; }
+    nav ul li:nth-child(3) .submenu li .navTreeLevel1 {
+      width: 150%; }
     nav ul li:nth-child(3) .submenu li a {
       color: #000; }
     nav ul li:nth-child(4) a::before {
       background: #ffcc01; }
     nav ul li:nth-child(4) .submenu li a::before, nav ul li:nth-child(4) .submenu li .navTreeLevel1 a::before {
-      background: #ffcc01; }
+      background: #ffcc01;
+      border: white;
+      border-width: 1px;
+      border-style: inset;
+      border-radius: 3px; }
+    nav ul li:nth-child(4) .submenu li .navTreeLevel1 {
+      width: 150%; }
     nav ul li:nth-child(4) .submenu li a {
       color: #000; }
     nav ul li:nth-child(5) a::before {
       background: #00aeeb; }
     nav ul li:nth-child(5) .submenu li a::before, nav ul li:nth-child(5) .submenu li .navTreeLevel1 a::before {
-      background: #00aeeb; }
+      background: #00aeeb;
+      border: white;
+      border-width: 1px;
+      border-style: inset;
+      border-radius: 3px; }
+    nav ul li:nth-child(5) .submenu li .navTreeLevel1 {
+      width: 150%; }
     nav ul li:nth-child(5) .submenu li a {
       color: #000; }
     nav ul li:nth-child(6) a::before {
       background: #34bb51; }
     nav ul li:nth-child(6) .submenu li a::before, nav ul li:nth-child(6) .submenu li .navTreeLevel1 a::before {
-      background: #34bb51; }
+      background: #34bb51;
+      border: white;
+      border-width: 1px;
+      border-style: inset;
+      border-radius: 3px; }
+    nav ul li:nth-child(6) .submenu li .navTreeLevel1 {
+      width: 150%; }
     nav ul li:nth-child(6) .submenu li a {
       color: #000; }
   nav a {
@@ -137,27 +179,27 @@ nav {
   nav li:hover > ul.submenu {
     display: block;
     position: absolute;
-    z-index: 99999;
-    background: #ffffff;
-    background: #F5F5F5;
+    z-index: 999;
     text-align: left;
-    width: 200px;
-    -moz-box-shadow: 0 5px 10px #d6d6d6;
-    -webkit-box-shadow: 0 5px 10px #d6d6d6;
-    box-shadow: 0 5px 10px #d6d6d6; }
+    -moz-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    background: rgba(217, 0, 19, 0.8);
+    width: 450%;
+    margin-top: 10px;
+    top: 20px;
+    left: 0px; }
   nav li:first-child a {
     border-left: 0; }
-  nav ul.submenu a.state-published:hover,
-  nav .selected ul.submenu .state-published {
-    color: #666666; }
-  nav .submenu li a {
-    width: 160px; }
 
 .selected ul.submenu .state-published {
-  color: #008044 !important; }
+  color: #fff !important; }
 
-ul.submenu a.state-published:hover {
-  color: #001a0e !important; }
+ul.submenu a.state-published {
+  color: #fff !important; }
+  ul.submenu a.state-published:hover {
+    font-weight: bold; }
 
 nav ul li a.plain {
   font-weight: bold; }
