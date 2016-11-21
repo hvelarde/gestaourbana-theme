@@ -10,10 +10,15 @@ header {
 }
 
 .primary-header {
-    width: 100%;
+    width: calc(100% - 20px);
     background-color: #cccccc;
     padding: 5px 10px 30px;
-    margin: 15px 0px 0px 0px;
+    display: inline-block;
+    height: 0px;
+}
+.primary-header > a {
+  max-width: 40%;
+  margin-right: 1em;
 }
 /* banner */
 #logo {
@@ -29,17 +34,20 @@ header {
     float: left;
     margin: 0.7em 1em 0.2em 0;
     max-height: 200px;
+    max-width: 95%;
+    height: auto;
   }
 }
 /* search */
+/* search icon: &#xf002; */
 #portal-searchbox {
-  width: 300px;
+  width: 90%;
   height: 30px;
   float: left;
   text-align: right;
   padding: 0;
   border-radius: 2px;
-  background-color: #ccc;
+  background-color: #eee;
   input.searchField {
       border: 0;
       padding: 0.5em 0.2em 0.5em 0.2em;
@@ -47,18 +55,22 @@ header {
       background: transparent;
   }
   input.searchButton {
-      padding: 0.5em;
-      border: 0;
-      background: transparent;
-      text-indent: -99999px;
-      width: 35px;
+    padding: 0.5em;
+    border: 0;
+    background: transparent;
+    width: 35px;
+    font-family: FontAwesome, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    cursor: pointer;
   }
 }
 #LSResult {
   margin-top: 0;
 }
 #acessibilidade{
-    float: right;
+  float: right;
+}
+#linkAltoContraste {
+  display: inline-block;
 }
 #acessibilidade a{
   margin-right: 2em;
@@ -77,6 +89,9 @@ header {
 } 
 
 /* Navigation */
+#btnav > i {
+  display: none;
+}
 
 $colorsNav1:  rgba(200, 20, 0, 1), rgba(234, 86, 0, 1), rgba(193, 66, 146, 1),rgba(255, 204, 1, 1),rgba(0, 174, 235, 1),rgba(52, 187, 81, 1);
 $colorsNav08:  rgba(200, 20, 0, 0.8), rgba(234, 86, 0, 0.8), rgba(193, 66, 146, 0.8),rgba(255, 204, 1, 0.8),rgba(0, 174, 235, 0.8),rgba(52, 187, 81, 0.8);
@@ -288,11 +303,13 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
 	 #logo {
-    float: right;
+    position: absolute;
+    left: 70px;
       a{
          img {
-          margin-top: 5px;
-          width: 2em;
+          margin-top: 20px;
+          width: 40vw;
+          max-width: 3em;
           height: auto;
           top: 0;
           position: absolute;
@@ -304,16 +321,43 @@ dl.portlet ul.navTree .navTreeCurrentItem {
   }
   #main-header {
     height: 45px;
+    z-index: 3;
+  }
+  #second-header {
+    position: fixed;
+    left: 0;
+    top: 30px;
+    background-color: white;
+    margin: 0;
+    z-index: 3;
+    height: 100px;
+  }
+  .primary-header {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    margin: 0;
+    margin-left: -5%;
+    width: 100%;
+    height: 1.5em;
+    padding: 0.5em;
+    font-size: 12px;
   }
   #portal-searchbox {
-    display: none;
+    position: absolute;
+    top: 18px;
+    width: calc(300% - 40px);
+    margin-left: 20px;
   }
   #btnav {
-    width: 153px;
+    width: 40px;
+    padding: 10px;
     height: 40px;
     display: block;
-    top: 0;
-    position: absolute;
+    top: 30px;
+    left: 10px;
+    position: fixed;
+    z-index: 9;
     ul {
       display: none;
     }
@@ -345,11 +389,32 @@ dl.portlet ul.navTree .navTreeCurrentItem {
   header > div {
     width: 93%;
   }
-
+  #acessibilidade {
+    position: relative;
+    top: 3em;
+    font-size: 12px;
+    margin: 0;
+    width: 220px;
+  }
+}
+/*  Up to 600px */
+@media (max-width: 600px) {
+  #portal-searchbox {
+    width: calc(100% - 40px);
+  }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
   #logo {
     width: 70%;
   }
+  #acessibilidade {
+    right: -120px;
+    font-size: 10px;
+    position: absolute;
+    top: 1em;
+  }  
+  #linkAltoContraste {
+    display: block;
+  }  
 }
