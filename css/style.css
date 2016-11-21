@@ -247,21 +247,26 @@ h3 {
 
 .galleria-info {
   left: 0 !important;
-  top: 3em !important;
+  top: 5em !important;
   font-size: 14px;
   font-size: 1.3vw; }
 
 .galleria-info-text {
-  padding: 0; }
+  padding: 0;
+  display: none; }
 
 .galleria-info-title {
   font: bold 1.5em/1.1 'Open Sans', sans-serif;
   font-weight: normal; }
+  .galleria-info-title a {
+    font-weight: bold;
+    font-size: 24px; }
 
 .galleria-info-description {
   font: normal 1em/1.4 arial, helvetica, sans-serif;
   margin: 0;
-  color: #333333; }
+  color: #333333;
+  display: none; }
 
 .galleria-thumbnails-container {
   bottom: 10px; }
@@ -312,17 +317,27 @@ h3 {
     float: none;
     width: 100% !important;
     margin-left: -100% !important; }
+  .galleria-info {
+    font-size: 8px !important;
+    width: 60% !important;
+    top: 1em !important; }
+  .galleria-info-title {
+    padding: 15px !important; }
   /*Footer Properties*/ }
 
 .selectGrey {
   background: #ccc;
   font-weight: bold;
   width: 200px;
+  max-width: 50%;
   height: 2em;
   border-style: hidden; }
 
 .item100width img {
   width: 100%; }
+
+.section-description {
+  margin-bottom: 0.5em; }
 
 /* Logged in/out */
 #portal-personaltools {
