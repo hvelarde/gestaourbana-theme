@@ -342,7 +342,6 @@ h3 {
 }
 .galleria-info-text {
   padding: 0;
-  display: none;
 }
 .galleria-info-title {
   font: bold 1.5em/1.1 'Open Sans', sans-serif;
@@ -357,7 +356,7 @@ h3 {
   margin: 0;
   color: #333333;
   // Remover caso precise exibir a descrição
-  display: none;
+  display: none !important;
 }
 .galleria-thumbnails-container {
   bottom: 10px;
@@ -379,9 +378,11 @@ h3 {
     overflow: visible;
     font-size: 1.2em;
     height: 35%;
+    width: calc(100% - 1em);
   }
   img {
     margin: 0 !important;
+    object-fit: cover;
   }
 }
 
@@ -435,7 +436,7 @@ h3 {
 }
 
 .selectGrey{
-    background: #ccc;
+    background: #eee;
     font-weight: bold;
     width: 200px;
     max-width: 50%;

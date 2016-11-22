@@ -11,7 +11,7 @@ header {
 
 .primary-header {
     width: calc(100% - 20px);
-    background-color: #cccccc;
+    background-color: #eee;
     padding: 5px 10px 30px;
     display: inline-block;
     height: 0px;
@@ -68,6 +68,7 @@ header {
 }
 #acessibilidade{
   float: right;
+  text-align: right;
 }
 #linkAltoContraste {
   display: inline-block;

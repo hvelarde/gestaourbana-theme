@@ -252,8 +252,7 @@ h3 {
   font-size: 1.3vw; }
 
 .galleria-info-text {
-  padding: 0;
-  display: none; }
+  padding: 0; }
 
 .galleria-info-title {
   font: bold 1.5em/1.1 'Open Sans', sans-serif;
@@ -266,7 +265,7 @@ h3 {
   font: normal 1em/1.4 arial, helvetica, sans-serif;
   margin: 0;
   color: #333333;
-  display: none; }
+  display: none !important; }
 
 .galleria-thumbnails-container {
   bottom: 10px; }
@@ -284,10 +283,12 @@ h3 {
   font-weight: bold;
   overflow: visible;
   font-size: 1.2em;
-  height: 35%; }
+  height: 35%;
+  width: calc(100% - 1em); }
 
 .newsStyle img {
-  margin: 0 !important; }
+  margin: 0 !important;
+  object-fit: cover; }
 
 /* Portrait tablet to landscape and desktop */
 /* Landscape phone to portrait tablet */
@@ -326,7 +327,7 @@ h3 {
   /*Footer Properties*/ }
 
 .selectGrey {
-  background: #ccc;
+  background: #eee;
   font-weight: bold;
   width: 200px;
   max-width: 50%;
