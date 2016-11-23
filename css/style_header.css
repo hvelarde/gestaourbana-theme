@@ -392,11 +392,16 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     height: auto;
     width: 100%; }
   div:hover#btnav ul {
-    padding-top: 10px;
     display: block;
-    top: 40px;
-    position: absolute;
-    background: #ffffff; }
+    top: 80px;
+    background: white;
+    position: fixed;
+    width: 50%;
+    font-size: 12px;
+    line-height: 1;
+    left: 0;
+    padding: 0;
+    border-right: 1px solid #dadada; }
   div:hover#btnav ul li a {
     padding: 10px; }
   #btnav i {

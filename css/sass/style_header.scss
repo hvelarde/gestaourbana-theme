@@ -93,7 +93,8 @@ header {
 #btnav > i {
   display: none;
 }
-
+// Altura do menu mobile
+$mobileTopPos: 80px;
 $colorsNav1:  rgba(200, 20, 0, 1), rgba(234, 86, 0, 1), rgba(193, 66, 146, 1),rgba(255, 204, 1, 1),rgba(0, 174, 235, 1),rgba(52, 187, 81, 1);
 $colorsNav08:  rgba(200, 20, 0, 0.95), rgba(234, 86, 0, 0.95), rgba(193, 66, 146, 0.95),rgba(255, 204, 1, 0.95),rgba(0, 174, 235, 0.95),rgba(52, 187, 81, 0.95);
 nav {
@@ -372,11 +373,16 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     width: 100%;
   }
   div:hover#btnav ul {
-    padding-top: 10px;
     display: block;
-    top: 40px;
-    position: absolute;
-    background: #ffffff;
+    top: $mobileTopPos;
+    background: white;
+    position: fixed;
+    width: 50%;
+    font-size: 12px;
+    line-height: 1;
+    left: 0;
+    padding: 0;
+    border-right: 1px solid #dadada;
   }
   div:hover#btnav ul li a {
     padding: 10px;
