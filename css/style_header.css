@@ -385,13 +385,29 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     z-index: 9; }
     #btnav ul {
       display: none; }
+  #btnav > ul > li:not(:first-child) a, ul.submenu > li:not(:first-child) a, li#portaltab-marco-regulatorio > a {
+    pointer-events: none; }
+  #btnav > ul li:hover > ul.submenu, #btnav > ul li:focus > ul.submenu {
+    display: block;
+    width: calc(50% - 1px);
+    left: calc(50% - 1px);
+    top: 80px;
+    position: fixed;
+    margin: 0; }
   ul.submenu {
-    display: none !important; }
+    display: none; }
+  ul.submenu > li:first-child > a {
+    pointer-events: auto !important; }
+  .navTreeLevel1 {
+    position: fixed !important;
+    left: 0 !important; }
+    .navTreeLevel1 li a {
+      pointer-events: auto !important; }
   nav li {
     display: block;
     height: auto;
     width: 100%; }
-  div:hover#btnav ul {
+  div:hover#btnav > ul {
     display: block;
     top: 80px;
     background: white;

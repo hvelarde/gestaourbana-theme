@@ -298,7 +298,8 @@ h3 {
   #wrapper {
     width: calc(100% - 40px); }
   #main {
-    margin-top: 4em;
+    margin-top: 6em;
+    margin-bottom: 2em;
     display: block; }
   div.cell {
     float: none;
@@ -310,7 +311,15 @@ h3 {
   #column-two {
     display: block;
     float: none;
-    width: 100%; } }
+    width: 100%; }
+  img {
+    max-width: 100%;
+    height: auto; }
+  fieldset {
+    min-width: inherit;
+    width: inherit; }
+    fieldset input {
+      width: 100%; } }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {

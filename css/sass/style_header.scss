@@ -97,6 +97,7 @@ header {
 $mobileTopPos: 80px;
 $colorsNav1:  rgba(200, 20, 0, 1), rgba(234, 86, 0, 1), rgba(193, 66, 146, 1),rgba(255, 204, 1, 1),rgba(0, 174, 235, 1),rgba(52, 187, 81, 1);
 $colorsNav08:  rgba(200, 20, 0, 0.95), rgba(234, 86, 0, 0.95), rgba(193, 66, 146, 0.95),rgba(255, 204, 1, 0.95),rgba(0, 174, 235, 0.95),rgba(52, 187, 81, 0.95);
+$halfMenu: calc(50% - 1px);
 nav {
     clear: both;
     font-size: 0.9em;
@@ -364,15 +365,37 @@ dl.portlet ul.navTree .navTreeCurrentItem {
       display: none;
     }
   }
+  // Experimental
+  #btnav > ul > li:not(:first-child) a, ul.submenu > li:not(:first-child) a, li#portaltab-marco-regulatorio > a {
+    pointer-events: none;
+  }
+  #btnav > ul li:hover > ul.submenu, #btnav > ul li:focus > ul.submenu {
+    display: block;
+    width: $halfMenu;
+    left: $halfMenu;
+    top: $mobileTopPos;
+    position: fixed;
+    margin: 0;    
+  }
   ul.submenu {
-    display: none !important;
+    display: none;
+  }
+  ul.submenu > li:first-child > a {
+    pointer-events: auto !important;
+  }
+  .navTreeLevel1 {
+    position: fixed !important;
+    left: 0 !important;
+    li a {
+      pointer-events: auto !important;
+    }
   }
   nav li {
     display: block;
     height: auto;
     width: 100%;
   }
-  div:hover#btnav ul {
+  div:hover#btnav > ul {
     display: block;
     top: $mobileTopPos;
     background: white;
