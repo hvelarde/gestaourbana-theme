@@ -73,7 +73,6 @@ header {
 #second-header .col-md-4:nth-child(2) {
   position: relative;
   top: 2em; }
-
 #second-header .col-md-4:nth-child(3) {
   position: relative;
   top: 3em; }
@@ -86,15 +85,16 @@ nav {
   clear: both;
   font-size: 0.9em;
   background: transparent;
-  /* ul.submenu a.state-published:hover,
-    .selected ul.submenu .state-published {
-      color: #666666;
-    }*/
+  /* ul.submenu a.state-published:hover,
+   .selected ul.submenu .state-published {
+     color: #666666;
+   }*/
   /* dropdown compatibility */
-  /* .submenu li a {
-      width: 160px;
-    }*/ }
+  /* .submenu li a {
+     width: 160px;
+   }*/ }
   nav ul {
+    position: relative;
     background: #ffffff;
     background: transparent;
     color: #666666;
@@ -182,7 +182,7 @@ nav {
     min-width: 3em;
     display: inline-block; }
   nav li {
-    /*Cor interna do NAVBAR(nível 0 e 1)*/ }
+    /*Cor interna do NAVBAR(n├¡vel 0 e 1)*/ }
     nav li a {
       line-height: auto;
       padding: 9px 15px; }
@@ -194,7 +194,7 @@ nav {
         background-color: #000;
         display: inline-block;
         vertical-align: middle; }
-    nav li:hover {
+    nav li:hover li {
       position: relative; }
     nav li:hover > ul.submenu {
       display: block;
@@ -205,7 +205,7 @@ nav {
       -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
       box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
       border-radius: 3px;
-      width: 550%;
+      width: 100%;
       margin-top: 10px;
       top: 20px;
       left: 0px; }
@@ -268,21 +268,17 @@ dl.portlet dt.portletHeader a {
 aside dl, aside dd, aside ul {
   padding: 0;
   margin: 0; }
-
 aside a {
   text-decoration: none; }
 
 /* portlet navigation */
 .portletNavigationTree ul {
   margin: 0; }
-
 .portletNavigationTree li {
   list-style-position: inside; }
-
 .portletNavigationTree .navTreeLevel0 > li {
   border-bottom: #d9d9d9 1px solid;
   list-style: none; }
-
 .portletNavigationTree a {
   display: block;
   padding: 0.3em 0.3em 0.3em 0.5em; }
@@ -346,11 +342,14 @@ dl.portlet ul.navTree .navTreeCurrentItem {
       height: auto;
       top: 0;
       position: absolute; }
+
   #portal-breadcrumbs {
     display: none; }
+
   #main-header {
     height: 45px;
     z-index: 3; }
+
   #second-header {
     position: fixed;
     left: 0;
@@ -359,6 +358,7 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     margin: 0;
     z-index: 3;
     height: 100px; }
+
   .primary-header {
     position: fixed;
     z-index: 3;
@@ -369,11 +369,13 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     height: 1.5em;
     padding: 0.5em;
     font-size: 12px; }
+
   #portal-searchbox {
     position: absolute;
     top: 18px;
     width: calc(300% - 40px);
     margin-left: 20px; }
+
   #btnav {
     width: 40px;
     padding: 10px;
@@ -385,8 +387,10 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     z-index: 9; }
     #btnav ul {
       display: none; }
+
   #btnav > ul > li:not(:first-child) a, ul.submenu > li:not(:first-child) a, li#portaltab-marco-regulatorio > a {
     pointer-events: none; }
+
   #btnav > ul li:hover > ul.submenu, #btnav > ul li:focus > ul.submenu {
     display: block;
     width: calc(50% - 1px);
@@ -394,19 +398,24 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     top: 80px;
     position: fixed;
     margin: 0; }
+
   ul.submenu {
     display: none; }
+
   ul.submenu > li:first-child > a {
     pointer-events: auto !important; }
+
   .navTreeLevel1 {
     position: fixed !important;
     left: 0 !important; }
     .navTreeLevel1 li a {
       pointer-events: auto !important; }
+
   nav li {
     display: block;
     height: auto;
     width: 100%; }
+
   div:hover#btnav > ul {
     display: block;
     top: 80px;
@@ -418,35 +427,41 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     left: 0;
     padding: 0;
     border-right: 1px solid #dadada; }
+
   div:hover#btnav ul li a {
     padding: 10px; }
+
   #btnav i {
     display: block;
     font-size: 2em;
     padding-top: 10px;
     color: #888; }
+
   header > div {
     width: 93%; }
+
   #acessibilidade {
     position: relative;
     top: 3em;
     font-size: 12px;
     margin: 0;
     width: 220px; } }
-
 /*  Up to 600px */
 @media (max-width: 600px) {
   #portal-searchbox {
     width: calc(100% - 40px); } }
-
 /* Landscape phones and down */
 @media (max-width: 480px) {
   #logo {
     width: 70%; }
+
   #acessibilidade {
     right: -120px;
     font-size: 10px;
     position: absolute;
     top: 1em; }
+
   #linkAltoContraste {
     display: block; } }
+
+/*# sourceMappingURL=style_header.css.map */
