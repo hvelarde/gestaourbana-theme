@@ -1,3 +1,3 @@
 $(document).ready(function($) {
-	$(".searchButton").first().val("");
+  $(".searchButton").first().val("");
 });

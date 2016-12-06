@@ -327,7 +327,7 @@ nav li a::before {
   margin: 5px;
   background-color: #000;
   display: inline-block;
-  vertical-align: middle; 
+  vertical-align: middle;
 }
 nav ul li:nth-child(1) a::before {background: #464646;}
 nav ul li:nth-child(2) a::before {background: #473f94;}
@@ -563,7 +563,7 @@ footer p {
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-  
+
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
