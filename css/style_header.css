@@ -112,8 +112,9 @@ nav {
       border-width: 1px;
       border-style: inset;
       border-radius: 3px; }
-    nav ul li:nth-child(1) .submenu li .navTreeLevel1 {
-      width: 150%; }
+    nav ul li:nth-child(1) .submenu li .navTreeLevel1 li {
+      width: 100%;
+      display: flex; }
     nav ul li:nth-child(1) .submenu li a {
       color: #000; }
     nav ul li:nth-child(2) a::before {
@@ -124,8 +125,9 @@ nav {
       border-width: 1px;
       border-style: inset;
       border-radius: 3px; }
-    nav ul li:nth-child(2) .submenu li .navTreeLevel1 {
-      width: 150%; }
+    nav ul li:nth-child(2) .submenu li .navTreeLevel1 li {
+      width: 100%;
+      display: flex; }
     nav ul li:nth-child(2) .submenu li a {
       color: #000; }
     nav ul li:nth-child(3) a::before {
@@ -136,8 +138,9 @@ nav {
       border-width: 1px;
       border-style: inset;
       border-radius: 3px; }
-    nav ul li:nth-child(3) .submenu li .navTreeLevel1 {
-      width: 150%; }
+    nav ul li:nth-child(3) .submenu li .navTreeLevel1 li {
+      width: 100%;
+      display: flex; }
     nav ul li:nth-child(3) .submenu li a {
       color: #000; }
     nav ul li:nth-child(4) a::before {
@@ -148,8 +151,9 @@ nav {
       border-width: 1px;
       border-style: inset;
       border-radius: 3px; }
-    nav ul li:nth-child(4) .submenu li .navTreeLevel1 {
-      width: 150%; }
+    nav ul li:nth-child(4) .submenu li .navTreeLevel1 li {
+      width: 100%;
+      display: flex; }
     nav ul li:nth-child(4) .submenu li a {
       color: #000; }
     nav ul li:nth-child(5) a::before {
@@ -160,8 +164,9 @@ nav {
       border-width: 1px;
       border-style: inset;
       border-radius: 3px; }
-    nav ul li:nth-child(5) .submenu li .navTreeLevel1 {
-      width: 150%; }
+    nav ul li:nth-child(5) .submenu li .navTreeLevel1 li {
+      width: 100%;
+      display: flex; }
     nav ul li:nth-child(5) .submenu li a {
       color: #000; }
     nav ul li:nth-child(6) a::before {
@@ -172,8 +177,9 @@ nav {
       border-width: 1px;
       border-style: inset;
       border-radius: 3px; }
-    nav ul li:nth-child(6) .submenu li .navTreeLevel1 {
-      width: 150%; }
+    nav ul li:nth-child(6) .submenu li .navTreeLevel1 li {
+      width: 100%;
+      display: flex; }
     nav ul li:nth-child(6) .submenu li a {
       color: #000; }
   nav a {
@@ -194,8 +200,6 @@ nav {
         background-color: #000;
         display: inline-block;
         vertical-align: middle; }
-    nav li:hover li {
-      position: relative; }
     nav li:hover > ul.submenu {
       display: block;
       position: absolute;
@@ -212,29 +216,38 @@ nav {
     nav li:nth-child(1):hover > ul.submenu {
       background: rgba(200, 20, 0, 0.95); }
       nav li:nth-child(1):hover > ul.submenu .navTreeLevel1 {
-        background: #c81400; }
+        background: #c81400;
+        margin-top: 1.46em; }
     nav li:nth-child(2):hover > ul.submenu {
       background: rgba(234, 86, 0, 0.95); }
       nav li:nth-child(2):hover > ul.submenu .navTreeLevel1 {
-        background: #ea5600; }
+        background: #ea5600;
+        margin-top: 1.46em; }
     nav li:nth-child(3):hover > ul.submenu {
       background: rgba(193, 66, 146, 0.95); }
       nav li:nth-child(3):hover > ul.submenu .navTreeLevel1 {
-        background: #c14292; }
+        background: #c14292;
+        margin-top: 1.46em; }
     nav li:nth-child(4):hover > ul.submenu {
       background: rgba(255, 204, 1, 0.95); }
       nav li:nth-child(4):hover > ul.submenu .navTreeLevel1 {
-        background: #ffcc01; }
+        background: #ffcc01;
+        margin-top: 1.46em; }
     nav li:nth-child(5):hover > ul.submenu {
       background: rgba(0, 174, 235, 0.95); }
       nav li:nth-child(5):hover > ul.submenu .navTreeLevel1 {
-        background: #00aeeb; }
+        background: #00aeeb;
+        margin-top: 1.46em; }
     nav li:nth-child(6):hover > ul.submenu {
       background: rgba(52, 187, 81, 0.95); }
       nav li:nth-child(6):hover > ul.submenu .navTreeLevel1 {
-        background: #34bb51; }
+        background: #34bb51;
+        margin-top: 1.46em; }
     nav li:first-child a {
       border-left: 0; }
+
+#portaltab-rede-de-equipamentos ul li a {
+  color: #222 !important; }
 
 .selected ul.submenu .state-published {
   color: #fff !important; }

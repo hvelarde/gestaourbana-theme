@@ -119,8 +119,9 @@ nav {
                           border-style: inset;
                           border-radius: 3px;
                   }
-                  .navTreeLevel1{
-                        width: 150%;
+                  .navTreeLevel1 li{
+                        width: 100%;
+                        display: flex;
                   }
                   a{
                       color: #000;
@@ -149,7 +150,7 @@ nav {
           }
         }
         &:hover li {
-          position: relative;
+          //position: relative;
         }
         &:hover > ul.submenu {
           display: block;
@@ -166,15 +167,19 @@ nav {
           left: 0px;
         }
         /*Cor interna do NAVBAR(nível 0 e 1)*/
-        @for $i from 1 through 6 {
-            &:nth-child(#{$i}):hover > ul.submenu{
+        @for $i from 1 through 6 { 
+            &:nth-child(#{$i}):hover{ 
+              > ul.submenu{
                 background: nth($colorsNav08, $i);
+                 
                 .navTreeLevel1{
                     background: nth($colorsNav1, $i);
+                    margin-top: 1.46em;
                 }
-            }
-
+              }
+          }
         }
+ 
 
         &:first-child a {
             border-left: 0;
@@ -192,7 +197,10 @@ nav {
     
 }
 
-
+       //amarelo, mudar fonte
+        #portaltab-rede-de-equipamentos ul li a {
+            color: #222 !important;
+        }
 .selected ul.submenu .state-published {
   color: #fff !important;
 }

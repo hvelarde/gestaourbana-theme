@@ -367,6 +367,7 @@ h3 {
     }
 }
 /* news */
+$colorsNav06:  rgba(200, 20, 0, 0.6), rgba(234, 86, 0, 0.6), rgba(193, 66, 146, 0.6),rgba(255, 204, 1, 0.6),rgba(0, 174, 235, 0.6),rgba(52, 187, 81, 0.6);
 .newsStyle {
   h2 {
     background-color: rgba(0, 0, 0, 0.6);
@@ -377,12 +378,58 @@ h3 {
     font-weight: bold;
     overflow: visible;
     font-size: 1.2em;
-    height: 35%;
+    top: 60%;
+    height: 4em;
     width: calc(100% - 1em);
+    a{
+      color: #fff !important;
+      &:hover{
+        color: #000 !important;
+      }
+    }
   }
   img {
     margin: 0 !important;
     object-fit: cover;
+    height: 15em;
+    width: 100%;
+  }
+}
+.newsStyleVermelho{
+  @extend .newsStyle;
+  h2{
+    background-color: nth($colorsNav06, 1);
+  }
+}
+.newsStyleLaranja{
+  @extend .newsStyle;
+  h2{
+    background-color: nth($colorsNav06, 2);
+  }
+}
+.newsStyleRoxo{
+  @extend .newsStyle;
+  h2{
+    background-color: nth($colorsNav06, 3);
+  }
+}
+.newsStyleAmarelo{
+  @extend .newsStyle;
+  h2{
+    background-color: nth($colorsNav06, 4);
+  }
+}
+
+.newsStyleAzul{
+  @extend .newsStyle;
+  h2{
+    background-color: nth($colorsNav06, 5);
+  }
+}
+.newsStyleVerde{
+  @extend .newsStyle;
+  h2{
+    background-color: nth($colorsNav06, 6);
   }
 }
 
